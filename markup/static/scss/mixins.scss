@@ -12,7 +12,7 @@
     &:before,
     &:after {
         display: table;
-        content: "";
+        content: '';
     }
 
     &:after {
@@ -30,3 +30,111 @@
 }
 
 // You can add your own mixins here:
+
+@mixin mobile {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 750px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: 990px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin font-size-h1 {
+    font-size: 4rem;
+
+    @include tablet {
+        font-size: 4.5rem;
+    }
+
+    @include laptop {
+        font-size: 5rem;
+    }
+
+    @include desktop {
+        font-size: 5.5rem;
+    }
+}
+
+@mixin font-size-h2 {
+    font-size: 2.5rem;
+
+    @include tablet {
+        font-size: 3rem;
+    }
+
+    @include laptop {
+        font-size: 3.5rem;
+    }
+
+    @include desktop {
+        font-size: 4rem;
+    }
+}
+
+@mixin font-size-h3 {
+    font-size: 2.25rem;
+
+    @include tablet {
+        font-size: 2.5rem;
+    }
+
+    @include laptop {
+        font-size: 2.75rem;
+    }
+
+    @include desktop {
+        font-size: 3rem;
+    }
+}
+
+@mixin font-size-h4 {
+    font-size: 1.75rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+
+    @include laptop {
+        font-size: 2.25rem;
+    }
+
+    @include desktop {
+        font-size: 2.5rem;
+    }
+}
+
+@mixin font-size-h5 {
+    font-size: 1.5rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+
+    @include laptop {
+        font-size: 1.75rem;
+    }
+
+    @include desktop {
+        font-size: 2rem;
+    }
+}
+
+@mixin font-size-h6 {
+    font-size: 1.25rem;
+}

@@ -5,98 +5,184 @@
     --font-family: 'Instrument Sans', sans-serif;
 
     --color-main: #080029;
-    --color-accent: #3D5AFF;
-    --color-gray:#636873;
+    --color-accent: #3d5aff;
+    --color-gray: #636873;
 
-    --transition:.3s ease-out;
+    --color-purple: #EFE9FF;
+    --color-green: #EBFFC9;
+    --color-blue: #D9EAFF;
+    --color-pink: #FFE9F1;
+    --color-orange: #FFEDD1;
+    --color-light-blue: #ECEFF5;
+    --color-light-pink: #F0E8E9;
+
+    --corner-radius: 4px;
+
+    --transition: 0.3s ease-out;
 }
 
 a {
-    outline:none;
-    border:0;
-    text-decoration:none;
-    transition:var(--transition);
-    color:inherit;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    transition: var(--transition);
+    color: inherit;
 }
 
 .headline {
-    color:var(--color-gray);
+    color: var(--color-gray);
     font-size: 0.75rem;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.08em;
-    margin:0 0 .5rem;
+    margin: 0 0 0.5rem;
 
     &_middle {
-        text-align:center;
+        text-align: center;
     }
 }
 
 .title {
-    font-size: 5rem;
-    font-weight: 500;
-    line-height: 1.1;
-    margin:0 0 .5rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
     letter-spacing: -0.04em;
+    font-weight: 500;
 
     &_medium {
-        font-size:4rem;
-    }
-
-    &_middle {
-        text-align:center;
+        text-align: center;
     }
 
     .gradient-green {
-        position:relative;
+        position: relative;
 
         &:after {
-            content:'';
-            background: linear-gradient(90deg, #FFFFFF 0%, #E0FCB3 33%);
-            top:12px;
-            height:calc(100% - 22px);
-            left:0;
-            width:100%;
-            position:absolute;
-            z-index:-1;
+            content: '';
+            background: linear-gradient(90deg, #ffffff 0%, #e0fcb3 33%);
+            top: 12px;
+            height: calc(100% - 22px);
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
         }
     }
 }
 
 .subtitle {
-    color:var(--color-gray);
-    font-weight:500;
-    max-width:620px;
+    color: var(--color-gray);
+    font-weight: 500;
 
     &_middle {
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
 
+.team-label {
+  font-size: 0.813rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--color-main);
+  padding: 1px 8px;
+  border-radius: var(--corner-radius);
+
+  &--managment {
+    background-color: var(--color-purple);
+  }
+
+  &--wp {
+    background-color: var(--color-light-pink);
+  }
+
+  &--shopify {
+    background-color: var(--color-green);
+  }
+
+  &--design {
+    background-color: var(--color-blue);
+  }
+
+  &--support {
+    background-color: var(--color-pink);
+  }
+
+  &--content {
+    background-color: var(--color-orange);
+  }
+
+  &--ghost {
+    background-color: var(--color-light-blue);
+  }
+}
+
 .button {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border: 0;
-    transition:var(--transition);
+    transition: var(--transition);
     color: #fff;
     box-sizing: border-box;
     outline: none;
     box-shadow: none;
-    border-radius: 10px;
+    border-radius: var(--corner-radius);
     padding: 0 1.5rem 2px;
     appearance: none;
-    font-size:1rem;
-    font-family:var(--font-family);
+    font-size: 1rem;
+    font-family: var(--font-family);
     background: var(--color-main);
     height: 44px;
     font-weight: 600;
     letter-spacing: -0.02em;
 
     &:hover {
-        background:#111;
+        background: #111;
     }
+}
+
+//h1 {
+//  @include font-size-h1;
+//}
+
+h2 {
+    @include font-size-h2;
+}
+
+h3 {
+    @include font-size-h3;
+}
+
+h4 {
+    @include font-size-h4;
+}
+
+h5 {
+    @include font-size-h5;
+}
+
+h6 {
+    @include font-size-h6;
+}
+
+.body-l {
+  font-size: 1.125rem;
+
+  @include laptop {
+      font-size: 1.25rem;
+  }
+}
+
+.body-m {
+  font-size: 1rem;
+}
+
+.body-s {
+  font-size: 0.875rem;
+}
+
+.body-xs {
+  font-size: 0.75rem;
 }

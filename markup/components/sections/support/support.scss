@@ -1,0 +1,69 @@
+/*! Support Section
+-----------------
+ */
+.support-section {
+    &__info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 80px;
+        max-width: 1120px;
+        margin: 0 auto 120px;
+    }
+
+    &__content {
+        max-width: 790px;
+        text-align: center;
+        margin: 0 auto;
+
+        &--small {
+            max-width: 600px;
+        }
+    }
+
+    &__people {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    &__person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+            max-width: 200px;
+            max-height: 200px;
+            aspect-ratio: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        //&-name {}
+
+        &-position {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
