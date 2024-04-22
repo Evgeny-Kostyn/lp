@@ -362,9 +362,10 @@ $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 -------------------------------------
  */
 :root {
-  --font-family: "Inter", sans-serif;
-  --color-main: #2c2c2c;
+  --font-family: "Instrument Sans", sans-serif;
+  --color-main: #252D3D;
   --color-accent: #3D5AFF;
+  --color-gray:#636873;
   --transition:.3s ease-out;
 }
 
@@ -375,6 +376,78 @@ a {
   -webkit-transition: var(--transition);
   transition: var(--transition);
   color: inherit;
+}
+
+.headline {
+  color: var(--color-gray);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.headline_middle {
+  text-align: center;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.04em;
+}
+.title_medium {
+  font-size: 4rem;
+}
+.title_middle {
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--color-gray);
+  font-weight: 500;
+  max-width: 620px;
+}
+.subtitle_middle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  border: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10px;
+  padding: 0 1.5rem 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  background: var(--color-main);
+  height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.button:hover {
+  background: #111;
 }
 
 html {

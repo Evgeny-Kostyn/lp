@@ -2,10 +2,11 @@
 -------------------------------------
  */
 :root {
-    --font-family: 'Inter', sans-serif;
+    --font-family: 'Instrument Sans', sans-serif;
 
-    --color-main: #2c2c2c;
+    --color-main: #252D3D;
     --color-accent: #3D5AFF;
+    --color-gray:#636873;
 
     --transition:.3s ease-out;
 }
@@ -16,4 +17,70 @@ a {
     text-decoration:none;
     transition:var(--transition);
     color:inherit;
+}
+
+.headline {
+    color:var(--color-gray);
+    font-size: 0.75rem;
+    text-transform:uppercase;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+
+    &_middle {
+        text-align:center;
+    }
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin:0 0 1rem;
+    letter-spacing: -0.04em;
+
+    &_medium {
+        font-size:4rem;
+    }
+
+    &_middle {
+        text-align:center;
+    }
+}
+
+.subtitle {
+    color:var(--color-gray);
+    font-weight:500;
+    max-width:620px;
+
+    &_middle {
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+    }
+}
+
+.button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+    border: 0;
+    transition:var(--transition);
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 0 1.5rem 2px;
+    appearance: none;
+    font-size:1rem;
+    font-family:var(--font-family);
+    background: var(--color-main);
+    height: 44px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+
+    &:hover {
+        background:#111;
+    }
 }
