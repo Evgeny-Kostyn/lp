@@ -31,8 +31,7 @@
             align-items: center;
             gap: 0.5rem;
             background-color: var(--color-light-gray);
-            transition: background-color var(--transition), border var(--transition),
-                opacity var(--transition);
+            transition: border var(--transition), opacity var(--transition);
             user-select:none;
             cursor:default;
             border:1px solid transparent;
@@ -43,7 +42,6 @@
             }
 
             &--active {
-                background-color: transparent;
                 border-color: var(--color-accent);
             }
 
@@ -121,6 +119,11 @@
             @include tablet {
                 gap: 24px;
             }
+        }
+
+        .office__item {
+          border-radius: 12px;
+          overflow: hidden;
         }
     }
 }
