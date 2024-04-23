@@ -324,6 +324,27 @@
           justify-content: center;
           background-color: var(--color-main);
         }
+
+        &-label {
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 1.5;
+          padding: 1px 8px;
+          color: white;
+          background: rgba(8, 0, 41, 0.6);
+          border-radius: 4px;
+          width: max-content;
+          position: absolute;
+          bottom: 20px;
+
+          &--first {
+            left: 20px;
+          }
+
+          &--second {
+            right: 20px;
+          }
+        }
     }
 }
 
