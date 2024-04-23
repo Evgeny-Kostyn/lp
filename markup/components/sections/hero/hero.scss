@@ -2,9 +2,14 @@
 ----------------------
  */
 .hero-section {
-    padding: 2.5rem 0 5rem;
-    margin: 0 0 10rem;
+    padding: 1.5rem 0 3rem;
+    margin: 0 0 5rem;
     border-bottom: 1px solid #d8d8d8;
+
+    @include laptop {
+        padding: 2.5rem 0 5rem;
+        margin: 0 0 10rem;
+    }
 
     &__top {
         display: flex;
@@ -18,12 +23,29 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
+
+        .logo-ashstone {
+            height:14px;
+
+            @include laptop {
+                height:20px;
+            }
+        }
+
+        .logo-shopify {
+            height:30px;
+
+            @include laptop {
+                height:45px;
+            }
+        }
     }
 
     &__menu {
         display: flex;
         align-items: center;
         gap: 1rem;
+        grid-row-gap:.5rem;
         flex-wrap: wrap;
 
         @include laptop {
@@ -41,7 +63,7 @@
     }
 
     &__title {
-        margin-top: 10rem;
+        margin-top: 6rem;
         max-width: 1200px;
 
         @include laptop {

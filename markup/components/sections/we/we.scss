@@ -4,15 +4,6 @@
 .we-section {
     margin:0 0 10rem;
 
-    &__content {
-        background:var(--color-bg-map);
-        padding:7.125rem 4rem 13rem;
-    }
-
-    &__section {
-
-    }
-
     &__head {
         max-width:790px;
         margin:0 auto;
@@ -24,19 +15,149 @@
     }
 
     &__map {
-        margin:0 auto;
+        margin:1.188rem 0 -120px -250px;
         display:table;
+        position:relative;
+        overflow:hidden;
+
+        @include laptop {
+            margin:2.188rem auto -180px;
+        }
+
+        &-image {
+            height:550px;
+            object-fit:cover;
+
+            @include laptop {
+                height:863px;
+            }
+        }
+
+        &-mark {
+            position:absolute;
+            z-index:2;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            left:50%;
+            top:50%;
+
+            @include laptop {
+                gap:14px;
+            }
+
+            span {
+                width:10px;
+                height:10px;
+                background:#4ba820;
+                border-radius:50%;
+                box-shadow:0 0 0 5px rgba(80,196,78,.2);
+                display:block;
+
+                @include laptop {
+                    width:14px;
+                    height:14px;
+                    box-shadow:0 0 0 10px rgba(80,196,78,.2);
+                }
+            }
+
+            img {
+                height:14px;
+                width:auto;
+
+                @include laptop {
+                    height:17px;
+                }
+            }
+
+            &_andora {
+                transform:translate(-19px, -70px);
+
+                @include laptop {
+                    transform:translate(-30px,-100px);
+                }
+            }
+
+            &_ukraine {
+                transform:translate(87px, -88px);
+
+                @include laptop {
+                    transform:translate(133px,-133px);
+                }
+            }
+
+            &_georgia {
+                transform:translate(105px, -69px);
+
+                @include laptop {
+                    transform:translate(165px, -100px);
+                }
+            }
+
+            &_moldova {
+                transform:translate(70px, -116px);
+                flex-direction:column-reverse;
+
+                @include laptop {
+                    transform:translate(107px, -171px);
+                }
+            }
+
+            &_armenia {
+                transform:translate(105px, -73px);
+
+                @include laptop {
+                    transform:translate(165px, -100px);
+                }
+
+                img {
+                    margin-top:25px;
+                }
+            }
+
+            &_india {
+                transform:translate(210px, 7px);
+
+                @include laptop {
+                    transform:translate(334px, 13px);
+                }
+            }
+
+            &_russia {
+                transform:translate(166px, -133px);
+
+                @include laptop {
+                    transform:translate(245px, -196px);
+                }
+            }
+        }
     }
 
     &__grid {
         margin:0 auto;
-        max-width:1340px;
+        max-width:1330px;
         display:grid;
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:repeat(2,1fr);
+        position:relative;
+        z-index:2;
+        gap:66px;
+
+        @include mini {
+            grid-template-columns:repeat(1,1fr);
+        }
+
+        @include laptop {
+            gap:0;
+            grid-template-columns:repeat(4,1fr);
+        }
     }
 
-    &__column {
+    &__list {
+        margin:0 0 4.125rem;
 
+        &:last-child {
+            margin:0;
+        }
     }
 
     &__flag {

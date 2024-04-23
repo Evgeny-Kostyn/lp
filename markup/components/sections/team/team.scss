@@ -5,9 +5,11 @@
     padding: 0 0 6.75rem;
 
     &__grid {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include laptop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__content {
@@ -15,10 +17,24 @@
     }
 
     &__rate {
-        margin: 2.5rem 0 5rem;
+        margin: 2rem 0 3rem;
         display: flex;
-        align-items: center;
+        flex-direction:column;
         gap: 1rem;
+
+        &-stroke {
+            display:none;
+        }
+
+        @include tablet {
+            align-items: center;
+            flex-direction:row;
+            margin: 2.5rem 0 5rem;
+
+            &-stroke {
+                display:block;
+            }
+        }
 
         &-star {
             display: flex;
@@ -32,16 +48,21 @@
         }
     }
 
+    &__people {
+        margin-top:2rem;
+
+        @include laptop {
+            margin-top:0;
+        }
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 4rem 2.4rem;
-
-        @include mobile {
-            grid-template-columns: 1fr;
-        }
+        gap: 2.5rem 2rem;
 
         @include tablet {
+            gap: 4rem 2.4rem;
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -62,13 +83,29 @@
         flex-direction: column;
         align-items: center;
         transition: var(--transition);
+
+        .team-label {
+            font-size:.75rem;
+        }
+
+        @include tablet {
+            .team-label {
+                font-size:0.813rem;
+            }
+        }
     }
 
     &__photo {
-        margin: 0 0 1.25rem;
+        margin: 0 0 1rem;
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        aspect-ratio: 1;
+
+        @include tablet {
+            margin: 0 0 1.25rem;
+            width: 200px;
+            height: 200px;
+        }
 
         img {
             border-radius: 50%;
@@ -96,16 +133,13 @@
         }
 
         &-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem 1.5rem;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap: 2.5rem 1.5rem;
 
             @include tablet {
-              grid-template-columns: repeat(2, 1fr);
-            }
-
-            @include laptop {
-              grid-template-columns: repeat(3, 1fr);
+                gap: 4rem 1.5rem;
             }
         }
 
@@ -113,6 +147,15 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
+            width:100%;
+
+            @include tablet {
+                width:calc(50% - 1rem);
+            }
+
+            @include laptop {
+                width:calc(33.3% - 1rem);
+            }
         }
 
         &-list {
