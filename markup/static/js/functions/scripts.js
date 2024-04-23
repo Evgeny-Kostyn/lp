@@ -75,4 +75,49 @@
     };
 
     document.addEventListener('DOMContentLoaded', initOffices);
+
+
+
+    // Final Photos
+    const containers = [
+        { containerClass: 'final-section__photo_1', intervalDuration: 3300 },
+        { containerClass: 'final-section__photo_2', intervalDuration: 4520 },
+        { containerClass: 'final-section__photo_3', intervalDuration: 7250 },
+        { containerClass: 'final-section__photo_4', intervalDuration: 6600 },
+        { containerClass: 'final-section__photo_5', intervalDuration: 9150 },
+        { containerClass: 'final-section__photo_6', intervalDuration: 8260 },
+        { containerClass: 'final-section__photo_7', intervalDuration: 11450 }
+    ];
+
+    function handleImageCycling(containerClass, intervalDuration) {
+        const photoContainer = document.querySelector('.' + containerClass);
+        const images = photoContainer.querySelectorAll('img');
+        let currentIndex = 0;
+
+        function updateImage() {
+            images[currentIndex].classList.remove('show');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('show');
+        }
+
+        const intervalId = setInterval(updateImage, intervalDuration);
+
+        function stopImageCycling() {
+            clearInterval(intervalId);
+        }
+
+        let iterations = 0;
+        const maxIterations = 10;
+
+        if (iterations === maxIterations) {
+            stopImageCycling();
+        }
+    }
+
+    containers.forEach(function(container) {
+        handleImageCycling(container.containerClass, container.intervalDuration);
+    });
 })();
+
+
+

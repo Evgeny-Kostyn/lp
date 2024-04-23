@@ -141,6 +141,8 @@
             flex-wrap:wrap;
             justify-content:center;
             gap: 2.5rem 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
 
             @include tablet {
                 gap: 4rem 1.5rem;
@@ -154,11 +156,7 @@
             width:100%;
 
             @include tablet {
-                width:calc(50% - 1rem);
-            }
-
-            @include laptop {
-                width:calc(33.3% - 1rem);
+                width:initial;
             }
         }
 
@@ -166,7 +164,7 @@
             width: 100%;
             border: 1px dashed #7f52ff;
             border-radius: 12px;
-            padding: 2.5rem 1rem;
+            padding: 1.25rem;
             display: flex;
             align-items: center;
             justify-content: center;

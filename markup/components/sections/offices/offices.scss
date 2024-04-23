@@ -30,10 +30,12 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            border: none;
             background-color: var(--color-light-gray);
             transition: background-color var(--transition), border var(--transition),
                 opacity var(--transition);
+            user-select:none;
+            cursor:default;
+            border:1px solid transparent;
 
             .headline {
                 margin: 0;
@@ -42,7 +44,7 @@
 
             &--active {
                 background-color: transparent;
-                border: 1px solid var(--color-accent);
+                border-color: var(--color-accent);
             }
 
             @media screen and (pointer: fine) {
