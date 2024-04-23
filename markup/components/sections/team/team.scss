@@ -2,173 +2,198 @@
 -----------------
  */
 .team-section {
-    padding:0 0 6.75rem;
+    padding: 0 0 6.75rem;
 
     &__grid {
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__content {
-        max-width:790px;
+        max-width: 790px;
     }
 
     &__rate {
-        margin:2.5rem 0 5rem;
-        display:flex;
-        align-items:center;
-        gap:1rem;
-        font-size: 2rem;
-        font-weight: 500;
-        letter-spacing: -0.04em;
+        margin: 2.5rem 0 5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
         &-star {
-            display:flex;
-            align-items:center;
-            gap:.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        &-text {
+          margin: 0;
         }
     }
 
     &__list {
-        display:grid;
-        grid-template-columns:repeat(5,1fr);
-        gap:9.375rem;
-        grid-row-gap:4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem 2.4rem;
 
-        @include desktop-down {
-            grid-column-gap:3rem;
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8rem 4rem;
+        }
+
+        @include desktop {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 9.375rem 4rem;
         }
     }
 
     &__person {
-        text-align:center;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        transition:var(--transition);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: var(--transition);
     }
 
     &__photo {
-        margin:0 0 1.25rem;
-        border-radius:50%;
-        width:200px;
-        height:200px;
+        margin: 0 0 1.25rem;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
 
         img {
-            border-radius:50%;
-            width:100%;
-            height:100%;
-            object-fit:cover;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
     &__name {
-        margin:0 0 0.375rem;
+        margin: 0 0 0.375rem;
         letter-spacing: -0.04em;
-        font-size:1.25rem;
-        font-weight:500;
-        line-height:1.2;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
     }
 
     &__structure {
-        margin-top:7.5rem;
+        margin-top: 7.5rem;
 
         &-head {
-            max-width:790px;
-            margin:0 auto 2.5rem;
-            text-align:center;
+            max-width: 790px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
         }
 
         &-grid {
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:1.5rem;
-            grid-row-gap:4rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem 1.5rem;
+
+            @include tablet {
+              grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include laptop {
+              grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         &-item {
-            width:calc(33.3% - 1rem);
-            transition:var(--transition);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         &-list {
+            width: 100%;
             border: 1px dashed #7f52ff;
             border-radius: 12px;
-            padding:2.5rem 1rem;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:1.5rem;
-            margin:0 0 .5rem;
-            flex-wrap:wrap;
+            padding: 2.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 0 0 0.5rem;
+            flex-wrap: wrap;
+            flex-grow: 1;
         }
 
         &-item:has(.team-label--shopify) &-list {
-            border-color:#44ad33;
+            border-color: #44ad33;
         }
 
         &-item:has(.team-label--design) &-list {
-            border-color:#0072ff;
+            border-color: #0072ff;
         }
 
         &-item:has(.team-label--support) &-list {
-            border-color:#ce749f;
+            border-color: #ce749f;
         }
 
         &-item:has(.team-label--content) &-list {
-            border-color:#ffb78e;
+            border-color: #ffb78e;
         }
 
         &-item:has(.team-label--ghost) &-list {
-            border-color:#bcb3b3;
+            border-color: #bcb3b3;
         }
 
         &-item:has(.team-label--wp) &-list {
-            border-color:#ceafaf;
+            border-color: #ceafaf;
         }
 
         .team-label {
-            display:inline-flex;
-            font-size:1rem;
-            padding:0 10px;
-            height:31px;
-            align-items:center;
+            display: inline-flex;
+            font-size: 1rem;
+            padding: 0 10px;
+            height: 31px;
+            align-items: center;
+            align-self: flex-start;
         }
 
         &-person {
-            text-align:center;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:flex-start;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
         }
 
         &-photo {
-            margin:0 0 10px;
-            width:80px;
-            height:80px;
+            margin: 0 0 10px;
+            width: 80px;
+            height: 80px;
 
             img {
-                border-radius:50%;
-                width:100%;
-                height:100%;
-                object-fit:cover;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
         &-name {
-            margin:0 0 2px;
+            margin: 0 0 2px;
             letter-spacing: -0.04em;
-            font-weight:500;
-            line-height:1.5;
+            font-weight: 500;
+            line-height: 1.5;
         }
 
         &-label {
-            font-size:.875rem;
-            font-weight:500;
-            color:var(--color-gray-2);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-gray-2);
         }
     }
 }

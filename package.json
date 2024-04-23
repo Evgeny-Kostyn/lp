@@ -81,7 +81,8 @@
   },
   "scripts": {
     "install": "node ./tars/helpers/install-additional-deps.js",
-    "lint": "eslint webpack.config.js tars/*.js tars/tasks/**/*.js tars/watchers/**/*.js tars/helpers/**/*.js gulpfile.js --rule 'valid-jsdoc: [0, {}]'"
+    "lint": "eslint webpack.config.js tars/*.js tars/tasks/**/*.js tars/watchers/**/*.js tars/helpers/**/*.js gulpfile.js --rule 'valid-jsdoc: [0, {}]'",
+    "dev": "gulp dev --lr"
   },
   "repository": {
     "type": "git",
