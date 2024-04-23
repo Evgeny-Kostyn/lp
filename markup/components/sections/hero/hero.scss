@@ -3,12 +3,10 @@
  */
 .hero-section {
     padding: 1.5rem 0 3rem;
-    margin: 0 0 5rem;
     border-bottom: 1px solid #d8d8d8;
 
     @include laptop {
         padding: 2.5rem 0 5rem;
-        margin: 0 0 10rem;
     }
 
     &__top {

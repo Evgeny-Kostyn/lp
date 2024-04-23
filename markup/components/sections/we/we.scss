@@ -2,7 +2,11 @@
 -------------------
  */
 .we-section {
-    margin:0 0 10rem;
+  padding: 0 0 4rem;
+
+  @include laptop {
+    padding: 0 0 7.5rem;
+  }
 
     &__head {
         max-width:790px;

@@ -16,6 +16,7 @@
     --color-orange: #FFEDD1;
     --color-light-blue: #ECEFF5;
     --color-light-pink: #F0E8E9;
+    --color-light-gray: #F5F6FA;
 
     --color-bg-map: #f4f1f0;
 
@@ -154,7 +155,7 @@ h4 {
     @include font-size-h4;
 }
 
-h5 {
+h5, .h5 {
     @include font-size-h5;
 }
 

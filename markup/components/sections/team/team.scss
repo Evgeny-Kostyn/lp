@@ -2,14 +2,17 @@
 -----------------
  */
 .team-section {
-    padding: 0 0 6.75rem;
+    padding: 5rem 0 4rem;
+
+    @include laptop {
+      padding: 10rem 0 7.5rem;
+    }
 
     &__grid {
-        @include laptop {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__content {
@@ -20,6 +23,7 @@
         margin: 2rem 0 3rem;
         display: flex;
         flex-direction:column;
+        flex-wrap: wrap;
         gap: 1rem;
 
         &-stroke {
