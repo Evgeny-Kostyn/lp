@@ -3,6 +3,7 @@
  */
 .support-section {
   padding: 5rem 0 5rem;
+  border-bottom: 1px solid #d8d8d8;
 
   @include laptop {
     padding: 10rem 0 10rem;
@@ -76,10 +77,14 @@
     &__stats {
         margin: 0 0 5rem;
 
+        &_nomargin {
+            margin:0;
+        }
+
         &-screen {
             margin:2.5rem auto .875rem;
             display:table;
-            padding: 1.25rem;
+            padding: .5rem;
             border-radius: 4px;
             border: 1px solid rgba(127, 82, 255, 0.06);
             box-shadow: 0 10px 50px 0 rgba(127, 82, 255, 0.08);
@@ -88,6 +93,22 @@
             @include tablet {
                 padding: 3.75rem;
                 border-radius: 12px;
+            }
+
+            &_updates {
+                padding: .5rem;
+
+                @include tablet {
+                    padding:2.5rem 1.5rem;
+                }
+            }
+
+            &_asana {
+                padding:.5rem .5rem 0;
+
+                @include tablet {
+                    padding:2.5rem 1.5rem;
+                }
             }
         }
 
@@ -162,6 +183,8 @@
     }
 
     &__reviews {
+        margin:0 0 7.5rem;
+
         h3 {
             &.title--medium {
                 font-size:1.75rem;
@@ -268,5 +291,89 @@
 
     &__reviews &__content {
         max-width:520px;
+    }
+
+    &__changelog {
+        margin:2.5rem auto 5.5rem;
+        max-width:788px;
+        border: 1px solid rgba(127, 82, 255, 0.06);
+        border-radius: 12px;
+        box-shadow: 0 10px 50px 0 rgba(127, 82, 255, 0.08);
+        background: #fff;
+
+        @include tablet {
+            margin:2.5rem auto 7.5rem;
+        }
+
+        &-row {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        &-head &-row {
+            padding:2rem 0 1rem;
+            border-bottom:1px solid rgba(127, 82, 255, 0.06);
+
+            @include tablet {
+                padding:3rem 0 2rem;
+            }
+        }
+
+        &-body {
+            padding:1rem 0 2rem;
+
+            @include tablet {
+                padding:2rem 0 3rem;
+            }
+        }
+
+        &-body &-row {
+            margin:0 0 1rem;
+
+            @include tablet {
+                margin:0 0 2rem;
+            }
+
+            &:last-child {
+                margin:0;
+            }
+        }
+
+        &-column {
+            flex:1;
+            text-align:center;
+        }
+
+        &-head &-column {
+            font-size:1rem;
+            font-weight:500;
+            line-height:1.2;
+
+            @include tablet {
+                font-size:1.25rem;
+            }
+        }
+
+        &-body &-column {
+            color:var(--color-gray-2);
+            font-weight:500;
+            font-size:.875rem;
+
+            @include tablet {
+                font-size:1rem;
+            }
+        }
+    }
+
+    &__team {
+        max-width:1120px;
+        text-align:center;
+        margin:0 auto;
+
+        &-list {
+            margin:0 auto 2.5rem;
+            display:table;
+        }
     }
 }

@@ -1,0 +1,273 @@
+/*! Final Section
+----------------------
+ */
+.final-section {
+    &__desc {
+        padding:5rem 0;
+        max-width:1330px;
+        margin:0 auto;
+        text-align:center;
+
+        @include tablet {
+            padding:10rem 0;
+        }
+
+        .title {
+            margin:0;
+        }
+    }
+
+    &__end {
+        padding:6rem 0;
+        color:#fff;
+        background:var(--color-main);
+        overflow:hidden;
+        position:relative;
+
+        @include tablet {
+            padding:11.563rem 0;
+        }
+
+        .title {
+            margin:2.5rem auto;
+            text-align:center;
+            max-width:1465px;
+            position:relative;
+            z-index:2;
+
+            @include laptop {
+                font-size:4rem;
+            }
+
+            @include desktop {
+                font-size:5rem;
+            }
+        }
+    }
+
+    &__photo {
+        width:65px;
+        height:65px;
+        position:absolute;
+        z-index:1;
+        top:50%;
+        left:50%;
+
+        @include tablet {
+            width:125px;
+            height:125px;
+        }
+
+        @include laptop {
+            width:175px;
+            height:175px;
+        }
+
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:4px;
+            position:absolute;
+            left:0;
+            top:0;
+            opacity:0;
+            transition:1s;
+
+            @include tablet {
+                border-radius:12px;
+            }
+
+            &.show {
+                opacity:1;
+            }
+        }
+
+        &_1 {
+            transform:translate(-150px, -310px);
+
+            @include tablet {
+                transform:translate(-200px, -380px);
+            }
+
+            @include laptop {
+                transform:translate(-400px, -460px);
+            }
+
+            @include desktop {
+                transform:translate(-600px, -460px);
+            }
+        }
+
+        &_2 {
+            transform:translate(90px, -310px);
+
+            @include tablet {
+                transform:translate(200px, -380px);
+            }
+
+            @include laptop {
+                transform:translate(400px, -460px);
+            }
+
+            @include desktop {
+                transform:translate(600px, -460px);
+            }
+        }
+
+        &_3 {
+            transform:translate(140px, -280px);
+
+            @include tablet {
+                transform:translate(340px, -280px);
+            }
+
+            @include laptop {
+                transform:translate(540px, -340px);
+            }
+
+            @include desktop {
+                transform:translate(740px, -340px);
+            }
+        }
+
+        &_4 {
+            transform:translate(140px, 200px);
+
+            @include tablet {
+                transform:translate(350px, 120px);
+            }
+
+            @include laptop {
+                transform:translate(450px, 180px);
+            }
+
+            @include desktop {
+                transform:translate(650px, 180px);
+            }
+        }
+
+        &_5 {
+            transform:translate(50px,240px);
+
+            @include tablet {
+                transform:translate(150px,270px);
+            }
+
+            @include laptop {
+                transform:translate(250px,330px);
+            }
+
+            @include desktop {
+                transform:translate(350px,280px);
+            }
+        }
+
+        &_6 {
+            transform:translate(-140px,250px);
+
+            @include tablet {
+                transform:translate(-250px,220px);
+            }
+
+            @include laptop {
+                transform:translate(-350px,280px);
+            }
+
+            @include desktop {
+                transform:translate(-550px,280px);
+            }
+        }
+
+        &_7 {
+            left:0;
+            transform:translate(-20px, 105px);
+
+            @include tablet {
+                transform:translate(-100px, -210px);
+            }
+
+            @include laptop {
+                transform:translate(-80px, -260px);
+            }
+
+            @include desktop {
+                transform:translate(-40px, -260px);
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        gap: 0.75rem;
+        position:relative;
+        z-index:2;
+
+        .logo-ashstone {
+            height:14px;
+
+            @include laptop {
+                height:20px;
+            }
+        }
+
+        .logo-shopify {
+            height:30px;
+
+            @include laptop {
+                height:45px;
+            }
+        }
+    }
+
+    &__person {
+        display:flex;
+        align-items:center;
+        gap:10px;
+        justify-content:center;
+        position:relative;
+        z-index:2;
+
+        &-photo {
+            flex-shrink: 0;
+            width:44px;
+            height:44px;
+
+            @include tablet {
+                width:80px;
+                height:80px;
+            }
+
+            img {
+                width:100%;
+                height:100%;
+                display:block;
+                object-fit:cover;
+                border-radius:50%;
+            }
+        }
+
+        &-name {
+            font-size:1rem;
+            font-weight:500;
+            margin:0 0 2px;
+
+            @include tablet {
+                font-size:1.25rem;
+            }
+        }
+
+        &-label {
+            color:#fff;
+            opacity:.7;
+            font-weight:500;
+            font-size:.875rem;
+
+            @include tablet {
+                font-size:1rem;
+            }
+        }
+    }
+}
