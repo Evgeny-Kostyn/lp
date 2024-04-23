@@ -13,6 +13,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__content {
@@ -49,14 +50,6 @@
 
         &-text {
           margin: 0;
-        }
-    }
-
-    &__people {
-        margin-top:2rem;
-
-        @include laptop {
-            margin-top:0;
         }
     }
 
