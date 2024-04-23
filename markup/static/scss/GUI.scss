@@ -5,8 +5,9 @@
     --font-family: 'Instrument Sans', sans-serif;
 
     --color-main: #080029;
-    --color-accent: #3d5aff;
+    --color-accent: #7f52ff;
     --color-gray: #636873;
+    --color-gray-2: #524d69;
 
     --color-purple: #EFE9FF;
     --color-green: #EBFFC9;
@@ -15,6 +16,8 @@
     --color-orange: #FFEDD1;
     --color-light-blue: #ECEFF5;
     --color-light-pink: #F0E8E9;
+
+    --color-bg-map: #f4f1f0;
 
     --corner-radius: 4px;
 
@@ -36,10 +39,6 @@ a {
     font-weight: 700;
     letter-spacing: 0.08em;
     margin: 0 0 0.5rem;
-
-    &_middle {
-        text-align: center;
-    }
 }
 
 .title {
@@ -48,18 +47,14 @@ a {
     letter-spacing: -0.04em;
     font-weight: 500;
 
-    &_medium {
-        text-align: center;
-    }
-
     .gradient-green {
         position: relative;
 
         &:after {
             content: '';
             background: linear-gradient(90deg, #ffffff 0%, #e0fcb3 33%);
-            top: 12px;
-            height: calc(100% - 22px);
+            top: 6px;
+            height: calc(100% - 8px);
             left: 0;
             width: 100%;
             position: absolute;
@@ -71,12 +66,6 @@ a {
 .subtitle {
     color: var(--color-gray);
     font-weight: 500;
-
-    &_middle {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
 }
 
 .team-label {
@@ -133,13 +122,13 @@ a {
     appearance: none;
     font-size: 1rem;
     font-family: var(--font-family);
-    background: var(--color-main);
+    background: var(--color-accent);
     height: 44px;
     font-weight: 600;
     letter-spacing: -0.02em;
 
     &:hover {
-        background: #111;
+        background: #522cbf;
     }
 }
 

@@ -29,7 +29,7 @@
         font-weight:500;
 
         &:hover {
-            color:var(--color-gray);
+            color:var(--color-accent);
         }
     }
 
@@ -41,6 +41,11 @@
         letter-spacing: -0.04em;
         max-width:1465px;
         color:#111;
+
+        @include desktop-down {
+            font-size:4rem;
+            max-width:1200px;
+        }
 
         span {
             color:var(--color-gray);

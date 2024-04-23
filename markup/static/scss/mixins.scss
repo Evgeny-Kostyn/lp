@@ -50,7 +50,13 @@
 }
 
 @mixin desktop {
-    @media (min-width: 1600px) {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
+
+@mixin desktop-down {
+    @media (max-width: 1700px) {
         @content;
     }
 }
