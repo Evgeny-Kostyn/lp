@@ -509,7 +509,5 @@
         //# sourceMappingURL=index.js.map
     };
 
-    comparison();
-
     document.addEventListener('DOMContentLoaded', comparison);
 })();

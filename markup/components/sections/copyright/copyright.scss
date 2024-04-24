@@ -50,7 +50,11 @@
         }
 
         &_medium {
-            margin-bottom:3.125rem;
+            margin: 0 0 5rem;
+
+            &--2 {
+              margin: 0 0 3.125rem;
+            }
         }
 
         &_nomargin {

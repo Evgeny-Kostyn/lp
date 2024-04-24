@@ -56,21 +56,24 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem 2rem;
+        gap: 2.4rem;
 
         @include tablet {
-            gap: 4rem 2.4rem;
+            //gap: 4rem 2.4rem;
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @include laptop {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8rem 4rem;
+        @media (min-width: 1400px) {
+          grid-template-columns: repeat(4, 1fr);
+            gap: 4rem 7.5rem;
         }
 
         @include desktop {
             grid-template-columns: repeat(5, 1fr);
-            gap: 9.375rem 4rem;
+        }
+
+        @media (min-width: 1800px) {
+          gap: 4rem 9.375rem;
         }
     }
 
@@ -134,11 +137,10 @@
             flex-wrap:wrap;
             justify-content:center;
             gap: 2.5rem 1.5rem;
-            max-width: 1400px;
             margin: 0 auto;
 
             @include tablet {
-                gap: 4rem 1.5rem;
+                gap: 4rem 2.5rem;
             }
         }
 
@@ -157,7 +159,7 @@
             width: 100%;
             border: 1px dashed #7f52ff;
             border-radius: 12px;
-            padding: 1.25rem;
+            padding: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
