@@ -156,6 +156,15 @@
                     transform:translate(245px, -196px);
                 }
             }
+
+            &_monte {
+                transform:translate(41px, -74px);
+                flex-direction:column;
+
+                @include laptop {
+                    transform:translate(61px, -106px);
+                }
+            }
         }
     }
 
@@ -188,6 +197,12 @@
 
     &__flag {
         margin:0 0 .5rem;
+
+        img {
+            height:26px;
+            width:auto;
+            border-radius:8px;
+        }
     }
 
     &__country {

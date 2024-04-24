@@ -39,7 +39,7 @@
             }
 
             @include laptop {
-                max-width: 491px;
+                max-width: 550px;
             }
         }
 
@@ -168,7 +168,7 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
-            padding: 40px;
+            padding: 1.25rem;
             border-radius: 12px;
             background-color: var(--color-light-gray);
 
@@ -211,11 +211,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 40px;
 
         @include laptop {
             margin: 48px 0 0;
-            gap: 40px;
         }
 
         &-item {
@@ -228,9 +227,13 @@
             margin-bottom: 1rem;
             border: 1px solid rgba(127, 82, 255, 0.06);
             box-shadow: 0px 10px 50px 0px rgba(127, 82, 255, 0.08);
-            border-radius: 12px;
+            border-radius: 4px;
             overflow: hidden;
             max-width: 428px;
+
+            @include tablet {
+                border-radius: 12px;
+            }
 
             img {
                 width: 100%;
@@ -244,6 +247,13 @@
             font-size: 1rem;
             line-height: 1.2;
             letter-spacing: -0.02em;
+            text-align:center;
+            width:100%;
+
+            @include tablet {
+                width:initial;
+                text-align:left;
+            }
         }
 
         &-text {

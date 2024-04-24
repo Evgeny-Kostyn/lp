@@ -115,6 +115,36 @@
     containers.forEach(function (container) {
         handleImageCycling(container.containerClass, container.intervalDuration);
     });
+
+
+
+    // Copy Slide
+    const aboutSections = document.querySelectorAll('.copy-section__about');
+    const imageElements = document.querySelectorAll('.copy-section__image');
+
+    function handleIntersection(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                const dataAbout = entry.target.getAttribute('data-about');
+
+                const targetImage = document.querySelector(`.copy-section__image[data-image="${dataAbout}"]`);
+
+                imageElements.forEach(function(image) {
+                    image.classList.remove('copy-section__image_active');
+                });
+
+                if (targetImage) {
+                    targetImage.classList.add('copy-section__image_active');
+                }
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+    aboutSections.forEach(function(about) {
+        observer.observe(about);
+    });
 })();
 
 // img comparison
