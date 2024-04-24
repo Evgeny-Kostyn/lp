@@ -131,13 +131,13 @@ a {
     appearance: none;
     font-size: 1rem;
     font-family: var(--font-family);
-    background: var(--color-accent);
+    background: var(--color-main);
     height: 44px;
     font-weight: 600;
     letter-spacing: -0.02em;
 
     &:hover {
-        background: #087648;
+        opacity: 0.7;
     }
 }
 

@@ -29,11 +29,10 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: var(--color-light-gray);
             transition: border var(--transition), opacity var(--transition);
             user-select: none;
             cursor: default;
-            border: 1px solid transparent;
+            border: 1px solid #d4d4d4;
 
             .headline {
                 margin: 0;
@@ -41,7 +40,7 @@
             }
 
             &--active {
-                border-color: var(--color-accent);
+                border: 1px solid #080029;
             }
 
             @media screen and (pointer: fine) {
@@ -60,7 +59,7 @@
     &__block {
         overflow: hidden;
         border: 1px solid #d4d4d4;
-        border-radius: 12px;
+        border-radius: 8px;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -87,7 +86,7 @@
         }
 
         .title {
-          margin: 0;
+            margin: 0;
         }
 
         &--hidden {
@@ -108,8 +107,8 @@
         gap: 24px;
 
         @include laptop {
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
 
         &--hidden {
@@ -117,7 +116,7 @@
         }
 
         &-item {
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             aspect-ratio: 588 / 284;
 
