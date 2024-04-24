@@ -2,251 +2,249 @@
 -------------------
  */
 .we-section {
-  padding: 0 0 4rem;
+    margin: 64px 0 0;
 
-  @include laptop {
-    padding: 0 0 7.5rem;
-  }
+    @include laptop {
+        margin: 136px 0 0;
+    }
 
     &__head {
-        max-width:790px;
-        margin:0 auto;
-        text-align:center;
+        max-width: 790px;
 
         .subtitle {
-            margin:0;
+            margin: 0;
         }
     }
 
     &__map {
-        margin:1.188rem 0 -120px -250px;
-        display:table;
-        position:relative;
-        overflow:hidden;
+        margin: 1.188rem 0 -120px -250px;
+        display: table;
+        position: relative;
+        overflow: hidden;
 
         @include laptop {
-            margin:2.188rem auto -180px;
+            margin: 2.188rem auto -180px;
         }
 
         &-image {
-            height:550px;
-            object-fit:cover;
+            height: 550px;
+            object-fit: cover;
 
             @include laptop {
-                height:863px;
+                height: 863px;
             }
         }
 
         &-mark {
-            position:absolute;
-            z-index:2;
-            display:flex;
-            align-items:center;
-            gap:10px;
-            left:50%;
-            top:50%;
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            left: 50%;
+            top: 50%;
 
             @include laptop {
-                gap:14px;
+                gap: 14px;
             }
 
             span {
-                width:10px;
-                height:10px;
-                background:#4ba820;
-                border-radius:50%;
-                display:block;
-                transition:var(--transition);
+                width: 10px;
+                height: 10px;
+                background: #4ba820;
+                border-radius: 50%;
+                display: block;
+                transition: var(--transition);
 
                 @include laptop {
-                    width:14px;
-                    height:14px;
+                    width: 14px;
+                    height: 14px;
                 }
 
                 span {
-                    box-shadow: 0 0 0 10px rgba(80,196,78,.2);
+                    box-shadow: 0 0 0 10px rgba(80, 196, 78, 0.2);
                     transform: scale(1);
                     animation: blinkMark 2s infinite;
 
                     @keyframes blinkMark {
                         0% {
                             transform: scale(0.95);
-                            box-shadow: 0 0 0 0 rgba(80,196,78,.4);
+                            box-shadow: 0 0 0 0 rgba(80, 196, 78, 0.4);
                         }
 
                         70% {
                             transform: scale(1);
-                            box-shadow: 0 0 0 10px rgba(80,196,78,0);
+                            box-shadow: 0 0 0 10px rgba(80, 196, 78, 0);
                         }
 
                         100% {
                             transform: scale(0.95);
-                            box-shadow: 0 0 0 0 rgba(80,196,78,0);
+                            box-shadow: 0 0 0 0 rgba(80, 196, 78, 0);
                         }
                     }
                 }
             }
 
             img {
-                height:14px;
-                width:auto;
+                height: 14px;
+                width: auto;
 
                 @include laptop {
-                    height:17px;
+                    height: 17px;
                 }
             }
 
             &_andora {
-                transform:translate(-19px, -70px);
+                transform: translate(-19px, -70px);
 
                 @include laptop {
-                    transform:translate(-30px,-100px);
+                    transform: translate(-30px, -100px);
                 }
             }
 
             &_ukraine {
-                transform:translate(87px, -88px);
+                transform: translate(87px, -88px);
 
                 @include laptop {
-                    transform:translate(133px,-133px);
+                    transform: translate(133px, -133px);
                 }
             }
 
             &_georgia {
-                transform:translate(105px, -69px);
+                transform: translate(105px, -69px);
 
                 @include laptop {
-                    transform:translate(165px, -100px);
+                    transform: translate(165px, -100px);
                 }
             }
 
             &_moldova {
-                transform:translate(70px, -116px);
-                flex-direction:column-reverse;
+                transform: translate(70px, -116px);
+                flex-direction: column-reverse;
 
                 @include laptop {
-                    transform:translate(107px, -171px);
+                    transform: translate(107px, -171px);
                 }
             }
 
             &_armenia {
-                transform:translate(105px, -73px);
+                transform: translate(105px, -73px);
 
                 @include laptop {
-                    transform:translate(165px, -100px);
+                    transform: translate(165px, -100px);
                 }
 
                 img {
-                    margin-top:25px;
+                    margin-top: 25px;
                 }
             }
 
             &_india {
-                transform:translate(210px, 7px);
+                transform: translate(210px, 7px);
 
                 @include laptop {
-                    transform:translate(334px, 13px);
+                    transform: translate(334px, 13px);
                 }
             }
 
             &_russia {
-                transform:translate(166px, -133px);
+                transform: translate(166px, -133px);
 
                 @include laptop {
-                    transform:translate(245px, -196px);
+                    transform: translate(245px, -196px);
                 }
             }
 
             &_monte {
-                transform:translate(41px, -74px);
-                flex-direction:column;
+                transform: translate(41px, -74px);
+                flex-direction: column;
 
                 @include laptop {
-                    transform:translate(61px, -106px);
+                    transform: translate(61px, -106px);
                 }
             }
         }
     }
 
     &__grid {
-        margin:0 auto;
-        max-width:1330px;
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        position:relative;
-        z-index:2;
-        gap:66px;
+        margin: 0 auto;
+        max-width: 1330px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        z-index: 2;
+        gap: 66px;
 
         @include mini {
-            grid-template-columns:repeat(1,1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
 
         @include laptop {
-            gap:0;
-            grid-template-columns:repeat(4,1fr);
+            gap: 0;
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
     &__list {
-        margin:0 0 4.125rem;
+        margin: 0 0 4.125rem;
 
         &:last-child {
-            margin:0;
+            margin: 0;
         }
     }
 
     &__flag {
-        margin:0 0 .5rem;
+        margin: 0 0 0.5rem;
 
         img {
-            height:26px;
-            width:auto;
-            border-radius:8px;
+            height: 26px;
+            width: auto;
+            border-radius: 8px;
         }
     }
 
     &__country {
-        margin:0 0 1.875rem;
-        color:#000;
-        font-size:2rem;
-        font-weight:500;
-        line-height:1.2;
+        margin: 0 0 1.875rem;
+        color: #000;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
         letter-spacing: -0.04em;
     }
 
     &__person {
-        margin:0 0 1.5rem;
-        display:flex;
-        align-items:center;
-        gap:10px;
+        margin: 0 0 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
         &-photo {
-          flex-shrink: 0;
-            width:44px;
-            height:44px;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
 
             img {
-                width:100%;
-                height:100%;
-                display:block;
-                object-fit:cover;
-                border-radius:50%;
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                border-radius: 50%;
             }
         }
 
         &-name {
-            font-weight:500;
-            margin:0 0 2px;
+            font-weight: 500;
+            margin: 0 0 2px;
         }
 
         &-label {
-            color:var(--color-gray-2);
-            font-size:0.75rem;
-            font-weight:500;
+            color: var(--color-gray-2);
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
         &:last-child {
-            margin:0;
+            margin: 0;
         }
     }
 }

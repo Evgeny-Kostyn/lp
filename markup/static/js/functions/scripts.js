@@ -1,28 +1,6 @@
 // offices section
 (function () {
-    const initSlider = (elem) => {
-        let slider1 = new Swiper(elem, {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-            loop: true,
-            shortSwipes: false,
-            longSwipes: false,
-            allowTouchMove: false,
-            freeMode: true,
-            speed: 160000,
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                1100: {
-                    spaceBetween: 24,
-                },
-            },
-        });
-    };
-
-    const toggleOffice = (event, btns, sliders, infos) => {
+    const toggleOffice = (event, btns, grids, infos) => {
         const btn = event.currentTarget;
         if (
             !btn ||
@@ -39,13 +17,12 @@
         const newActiveId = btn.dataset.officeId;
         btn.classList.add('offices-section__toggle-item--active');
 
-        sliders.forEach((slider) => {
-            const sliderId = slider.dataset.officeId;
-            if (sliderId === newActiveId) {
-                slider.classList.remove('offices-section__slider--hidden');
-                initSlider(slider);
+        grids.forEach((grid) => {
+            const gridId = grid.dataset.officeId;
+            if (gridId === newActiveId) {
+              grid.classList.remove('offices-section__grid--hidden');
             } else {
-                slider.classList.add('offices-section__slider--hidden');
+              grid.classList.add('offices-section__grid--hidden');
             }
         });
 
@@ -60,17 +37,12 @@
     };
 
     const initOffices = () => {
-        const sliders = document.querySelectorAll('.js-office-slider');
+        const grids = document.querySelectorAll('.js-office-grid');
         const infos = document.querySelectorAll('.js-office-info');
         const btns = document.querySelectorAll('.js-office-toggle');
 
-        sliders.forEach((slider) => {
-            if (!slider.classList.contains('offices-section__slider--hidden')) {
-                initSlider(slider);
-            }
-        });
         btns.forEach((btn) => {
-            btn.addEventListener('click', (event) => toggleOffice(event, btns, sliders, infos));
+            btn.addEventListener('click', (event) => toggleOffice(event, btns, grids, infos));
         });
     };
 

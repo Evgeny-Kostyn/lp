@@ -2,10 +2,10 @@
 -----------------
  */
 .team-section {
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 0;
 
     @include laptop {
-      padding: 10rem 0 7.5rem;
+        padding: 10rem 0 0;
     }
 
     &__grid {
@@ -17,61 +17,39 @@
     }
 
     &__content {
-        max-width: 790px;
-    }
-
-    &__rate {
-        margin: 2rem 0 3rem;
-        display: flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        &-stroke {
-            display:none;
-        }
-
-        @include tablet {
-            align-items: center;
-            flex-direction:row;
-            margin: 2.5rem 0 5rem;
-
-            &-stroke {
-                display:block;
-            }
-        }
-
-        &-star {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        &-text {
-          margin: 0;
-        }
+        max-width: 997px;
     }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2.4rem;
+        margin: 40px 0 0;
 
         @include tablet {
-            //gap: 4rem 2.4rem;
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @media (min-width: 1400px) {
-          grid-template-columns: repeat(4, 1fr);
-            gap: 4rem 7.5rem;
+        @include laptop {
+            margin: 80px 0 0;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px 70px;
         }
 
-        @include desktop {
+        @media (min-width: 1360px) {
             grid-template-columns: repeat(5, 1fr);
-            gap: 3rem 4.375rem;
+            gap: 48px 70px;
         }
+
+        //@media (min-width: 1400px) {
+        //  grid-template-columns: repeat(4, 1fr);
+        //    gap: 4rem 7.5rem;
+        //}
+
+        //@include desktop {
+        //    grid-template-columns: repeat(5, 1fr);
+        //    gap: 3rem 4.375rem;
+        //}
     }
 
     &__person {
@@ -82,12 +60,12 @@
         transition: var(--transition);
 
         .team-label {
-            font-size:.75rem;
+            font-size: 0.75rem;
         }
 
         @include tablet {
             .team-label {
-                font-size:0.813rem;
+                font-size: 0.813rem;
             }
         }
     }
@@ -121,23 +99,24 @@
     }
 
     &__structure {
-        margin-top: 7.5rem;
+        margin: 64px 0 0;
+
+        @include laptop {
+            margin: 136px 0 0;
+        }
 
         &-head {
             max-width: 790px;
-            margin: 0 auto 2.5rem;
-            text-align: center;
+            margin: 0 0 40px;
         }
 
         &-grid {
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap: 2.5rem 1.5rem;
-            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 20px;
 
             @include tablet {
-                gap: 4rem 2.5rem;
+                gap: 48px 40px;
             }
         }
 
@@ -145,10 +124,10 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            width:100%;
+            width: 100%;
 
             @include tablet {
-                width:initial;
+                width: initial;
             }
         }
 
@@ -156,11 +135,11 @@
             width: 100%;
             border: 1px dashed #7f52ff;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 24px;
             margin: 0 0 0.5rem;
             flex-wrap: wrap;
             flex-grow: 1;
@@ -225,6 +204,7 @@
             letter-spacing: -0.04em;
             font-weight: 500;
             line-height: 1.5;
+            text-align: center;
         }
 
         &-label {
