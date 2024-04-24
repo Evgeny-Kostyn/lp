@@ -518,6 +518,5 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     })();
   };
 
-  comparison();
   document.addEventListener('DOMContentLoaded', comparison);
 })();

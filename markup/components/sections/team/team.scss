@@ -70,10 +70,7 @@
 
         @include desktop {
             grid-template-columns: repeat(5, 1fr);
-        }
-
-        @media (min-width: 1800px) {
-          gap: 4rem 9.375rem;
+            gap: 3rem 4.375rem;
         }
     }
 
@@ -103,8 +100,8 @@
 
         @include tablet {
             margin: 0 0 1.25rem;
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
         }
 
         img {

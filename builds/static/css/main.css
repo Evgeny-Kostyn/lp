@@ -658,7 +658,7 @@ body {
 }
 
 .max-width {
-  max-width: 1768px;
+  max-width: 1440px;
   padding: 0 24px;
   width: 100%;
   margin: 0 auto;
@@ -723,7 +723,10 @@ body {
           filter: drop-shadow(0 10px 50px rgba(127, 82, 255, 0.08));
 }
 .copy-section__picture_medium {
-  margin-bottom: 3.125rem;
+  margin: 0 0 5rem;
+}
+.copy-section__picture_medium--2 {
+  margin: 0 0 3.125rem;
 }
 .copy-section__picture_nomargin {
   margin-bottom: 0;
@@ -1953,6 +1956,11 @@ img-comparison-slider.rendered [slot=second] {
 .support-section__stats {
   margin: 0 0 5rem;
 }
+@media (min-width: 1100px) {
+  .support-section__stats {
+    margin: 0 0 7.5rem;
+  }
+}
 .support-section__stats_nomargin {
   margin: 0;
 }
@@ -1968,7 +1976,7 @@ img-comparison-slider.rendered [slot=second] {
 }
 @media (min-width: 750px) {
   .support-section__stats-screen {
-    padding: 3.75rem;
+    padding: 44px 29px;
     border-radius: 12px;
   }
 }
@@ -1982,10 +1990,11 @@ img-comparison-slider.rendered [slot=second] {
 }
 .support-section__stats-screen_asana {
   padding: 0.5rem 0.5rem 0;
+  margin-top: 1.5rem;
 }
 @media (min-width: 750px) {
   .support-section__stats-screen_asana {
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
   }
 }
 .support-section__stats-note {
@@ -2380,24 +2389,23 @@ img-comparison-slider.rendered [slot=second] {
 .team-section__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem 2rem;
+  gap: 2.4rem;
 }
 @media (min-width: 750px) {
   .team-section__list {
-    gap: 4rem 2.4rem;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1400px) {
   .team-section__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 8rem 4rem;
+    gap: 4rem 7.5rem;
   }
 }
 @media (min-width: 1700px) {
   .team-section__list {
     grid-template-columns: repeat(5, 1fr);
-    gap: 9.375rem 4rem;
+    gap: 3rem 4.375rem;
   }
 }
 .team-section__person {
@@ -2432,8 +2440,8 @@ img-comparison-slider.rendered [slot=second] {
 @media (min-width: 750px) {
   .team-section__photo {
     margin: 0 0 1.25rem;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
   }
 }
 .team-section__photo img {
@@ -2468,12 +2476,11 @@ img-comparison-slider.rendered [slot=second] {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 2.5rem 1.5rem;
-  max-width: 1400px;
   margin: 0 auto;
 }
 @media (min-width: 750px) {
   .team-section__structure-grid {
-    gap: 4rem 1.5rem;
+    gap: 4rem 2.5rem;
   }
 }
 .team-section__structure-item {
@@ -2497,7 +2504,7 @@ img-comparison-slider.rendered [slot=second] {
   width: 100%;
   border: 1px dashed #7f52ff;
   border-radius: 12px;
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
