@@ -62,7 +62,6 @@
 
     &__title {
         margin-top: 6rem;
-        max-width: 1200px;
 
         @include laptop {
             margin-top: 12rem;
@@ -70,7 +69,6 @@
 
         @include desktop {
             margin-top: 17.375rem;
-            max-width: 1465px;
         }
 
         span:not(.semibold) {
