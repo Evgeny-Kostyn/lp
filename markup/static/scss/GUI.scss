@@ -4,6 +4,8 @@
 :root {
     --font-family: 'Instrument Sans', sans-serif;
 
+    --font-size-body: 17px;
+
     --color-main: #080029;
     --color-accent: #7f52ff;
     --color-gray: #636873;
@@ -164,15 +166,15 @@ h6, .h6 {
 }
 
 .body-l {
-  font-size: 1rem;
+  font-size: 1.125rem;
 
   @include laptop {
-      font-size: 1.25rem;
+      font-size: 1.375rem;
   }
 }
 
 .body-m {
-  font-size: 1rem;
+  font-size: 1.063rem;
 }
 
 .body-s {
