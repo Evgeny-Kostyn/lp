@@ -16,14 +16,19 @@
         }
     }
 
+    &__content {
+        position:relative;
+        z-index:2;
+    }
+
     &__map {
-        margin: 1.188rem 0 -120px -250px;
+        margin: -6rem auto -10rem;
         display: table;
         position: relative;
         overflow: hidden;
 
         @include laptop {
-            margin: 2.188rem auto -180px;
+            margin: -26rem auto -34rem;
         }
 
         &-image {
@@ -31,7 +36,7 @@
             object-fit: cover;
 
             @include laptop {
-                height: 863px;
+                height: 1678px;
             }
         }
 
@@ -95,43 +100,43 @@
             }
 
             &_andora {
-                transform: translate(-19px, -70px);
+                transform: translate(-167px, -30px);
 
                 @include laptop {
-                    transform: translate(-30px, -100px);
+                    transform: translate(-506px, -74px);
                 }
             }
 
             &_ukraine {
-                transform: translate(87px, -88px);
+                transform: translate(-80px, -44px);
 
                 @include laptop {
-                    transform: translate(133px, -133px);
+                    transform: translate(-238px, -121px);
                 }
             }
 
             &_georgia {
-                transform: translate(105px, -69px);
+                transform: translate(-53px, -26px);
 
                 @include laptop {
-                    transform: translate(165px, -100px);
+                    transform: translate(-165px, -64px);
                 }
             }
 
             &_moldova {
-                transform: translate(70px, -116px);
+                transform: translate(-91px, -74px);
                 flex-direction: column-reverse;
 
                 @include laptop {
-                    transform: translate(107px, -171px);
+                    transform: translate(-262px, -160px);
                 }
             }
 
             &_armenia {
-                transform: translate(105px, -73px);
+                transform: translate(-53px, -30px);
 
                 @include laptop {
-                    transform: translate(165px, -100px);
+                    transform: translate(-165px, -64px);
                 }
 
                 img {
@@ -140,27 +145,27 @@
             }
 
             &_india {
-                transform: translate(210px, 7px);
+                transform: translate(35px, 40px);
 
                 @include laptop {
-                    transform: translate(334px, 13px);
+                    transform: translate(110px, 145px);
                 }
             }
 
             &_russia {
-                transform: translate(166px, -133px);
+                transform: translate(0, -80px);
 
                 @include laptop {
-                    transform: translate(245px, -196px);
+                    transform: translate(0, -196px);
                 }
             }
 
             &_monte {
-                transform: translate(41px, -74px);
+                transform: translate(-122px, -31px);
                 flex-direction: column;
 
                 @include laptop {
-                    transform: translate(61px, -106px);
+                    transform: translate(-357px, -75px);
                 }
             }
         }

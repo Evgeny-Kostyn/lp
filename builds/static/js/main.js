@@ -36,29 +36,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 // offices section
 (function () {
-  var initSlider = function initSlider(elem) {
-    var slider1 = new Swiper(elem, {
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      loop: true,
-      shortSwipes: false,
-      longSwipes: false,
-      allowTouchMove: false,
-      freeMode: true,
-      speed: 160000,
-      autoplay: {
-        delay: 1,
-        disableOnInteraction: false
-      },
-      breakpoints: {
-        1100: {
-          spaceBetween: 24
-        }
-      }
-    });
-  };
-
-  var toggleOffice = function toggleOffice(event, btns, sliders, infos) {
+  var toggleOffice = function toggleOffice(event, btns, grids, infos) {
     var btn = event.currentTarget;
 
     if (!btn || !btn.classList.contains('offices-section__toggle-item') || btn.classList.contains('offices-section__toggle-item--active')) {
@@ -70,14 +48,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     });
     var newActiveId = btn.dataset.officeId;
     btn.classList.add('offices-section__toggle-item--active');
-    sliders.forEach(function (slider) {
-      var sliderId = slider.dataset.officeId;
+    grids.forEach(function (grid) {
+      var gridId = grid.dataset.officeId;
 
-      if (sliderId === newActiveId) {
-        slider.classList.remove('offices-section__slider--hidden');
-        initSlider(slider);
+      if (gridId === newActiveId) {
+        grid.classList.remove('offices-section__grid--hidden');
       } else {
-        slider.classList.add('offices-section__slider--hidden');
+        grid.classList.add('offices-section__grid--hidden');
       }
     });
     infos.forEach(function (info) {
@@ -92,17 +69,12 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
   };
 
   var initOffices = function initOffices() {
-    var sliders = document.querySelectorAll('.js-office-slider');
+    var grids = document.querySelectorAll('.js-office-grid');
     var infos = document.querySelectorAll('.js-office-info');
     var btns = document.querySelectorAll('.js-office-toggle');
-    sliders.forEach(function (slider) {
-      if (!slider.classList.contains('offices-section__slider--hidden')) {
-        initSlider(slider);
-      }
-    });
     btns.forEach(function (btn) {
       btn.addEventListener('click', function (event) {
-        return toggleOffice(event, btns, sliders, infos);
+        return toggleOffice(event, btns, grids, infos);
       });
     });
   };
