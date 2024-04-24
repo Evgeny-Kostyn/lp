@@ -72,7 +72,7 @@ a {
 }
 
 .subtitle {
-    color: var(--color-gray);
+    color: var(--color-main);
     font-weight: 500;
 }
 
@@ -149,7 +149,7 @@ h2 {
     @include font-size-h2;
 }
 
-h3 {
+h3, .h3 {
     @include font-size-h3;
 }
 

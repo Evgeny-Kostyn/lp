@@ -1,0 +1,122 @@
+/*! Intro Section
+-----------------
+ */
+.intro-section {
+    padding: 5rem 0 5rem;
+    border-bottom: 1px solid #d8d8d8;
+
+    @include laptop {
+        padding: 10rem 0 10rem;
+    }
+
+    > .max-width > .hedline,
+    > .max-width > .title {
+        max-width: 997px;
+    }
+
+    > .max-width > .title {
+        margin: 0 0 40px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0 0 40px;
+
+        @include laptop {
+            flex-direction: row;
+        }
+
+        .subtitle {
+            width: 100%;
+
+            @include laptop {
+                width: calc(50% - 24px / 2);
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            padding: 25.8px 40px;
+            border-radius: 8px;
+            border: 1px solid #d4d4d4;
+        }
+
+        &-number {
+            margin: 0;
+        }
+
+        &-label {
+            color: var(--color-main);
+            margin: 0 0 40px;
+
+            @include laptop {
+                margin: 0 0 64px;
+            }
+        }
+
+        &-logo {
+            margin: 0 0 16px;
+        }
+    }
+
+    &__rate {
+        margin: 40px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include laptop {
+            flex-direction: row;
+            margin: 80px 0 0;
+            gap: 43px;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        &-block {
+            width: 100%;
+
+            &:last-child {
+                order: -1;
+                margin-bottom: -30px;
+            }
+
+            @include laptop {
+                width: calc(50% - 43px / 2);
+
+                &:last-child {
+                    order: unset;
+                }
+            }
+        }
+
+        &-star {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &-btn {
+            margin: 24px 0 0;
+        }
+    }
+}
