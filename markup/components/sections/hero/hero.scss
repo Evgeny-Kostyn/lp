@@ -63,6 +63,7 @@
 
     &__title {
         margin-top: 6rem;
+        margin-bottom: 0;
 
         @include laptop {
             margin-top: 12rem;

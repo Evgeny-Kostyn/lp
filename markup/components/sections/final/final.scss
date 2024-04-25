@@ -3,7 +3,7 @@
  */
 .final-section {
     &__fiches {
-        padding:5rem 0 0;
+        padding: 40px 0 80px;
 
         &-list {
             display:grid;
@@ -82,6 +82,16 @@
 
         .title {
             max-width:1068px;
+            margin: 0;
+        }
+    }
+
+    &__text {
+        max-width: 1068px;
+        margin: 0 0 40px;
+
+        @include laptop {
+            margin: 0 0 80px;
         }
     }
 
@@ -91,7 +101,7 @@
         border-top: 1px solid #d8d8d8;
 
         .title {
-            span:not(.semibold) {
+            span:not(.semibold):not(.gradient-green) {
                 color: var(--color-gray);
             }
         }

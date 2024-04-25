@@ -55,8 +55,8 @@
             justify-content: center;
             border-radius: 50%;
             overflow: hidden;
-            width: 200px;
-            height: 200px;
+            width: 160px;
+            height: 160px;
             margin: 0 0 1.25rem;
 
             img {
@@ -74,10 +74,18 @@
     }
 
     &__stats {
-        margin: 4.5rem 0 5rem;
+        margin: 4rem 0 4rem;
 
         @include laptop {
-          margin: 8.5rem 0 7.5rem;
+          margin: 8.5rem 0 8.5rem;
+        }
+
+        &#updates {
+            margin-bottom: 40px;
+
+            @include laptop {
+                margin-bottom: 80px;
+            }
         }
 
         &_nomargin {
@@ -92,7 +100,7 @@
             margin:2.5rem 0 .875rem;
 
             &_asana {
-                margin-top: 1.5rem;
+                margin-top: 2.5rem;
             }
         }
 
@@ -105,6 +113,10 @@
 
         &-btn {
             margin-top:1.5rem;
+        }
+
+        & > .support-section__content--small > .title {
+          margin: 0 0 16px;
         }
     }
 
@@ -156,11 +168,19 @@
         h3 {
             &.title--medium {
                 font-size:1.75rem;
-                margin:0 0 2rem;
+                margin:0 0 8px;
 
                 @include tablet {
                     font-size:2.5rem;
-                    margin:0 0 2.5rem;
+                    margin:0 0 16px;
+                }
+
+                & + div {
+                    margin:0 0 2rem;
+
+                  @include tablet {
+                      margin:0 0 2.5rem;
+                  }
                 }
             }
         }
@@ -180,6 +200,7 @@
             display:flex;
             gap:1rem;
             align-items:center;
+            margin: 0 0 16px;
         }
 
         &-count {
@@ -270,7 +291,7 @@
         width:100%;
 
         @include tablet {
-            margin:2.5rem 0 7.5rem;
+            margin:2.5rem 0 8.5rem;
         }
 
         &-row {
