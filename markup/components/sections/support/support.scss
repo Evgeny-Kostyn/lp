@@ -21,10 +21,14 @@
     }
 
     &__content {
-        max-width: 790px;
+        max-width: 840px;
 
         &--small {
-            max-width: 660px;
+            max-width: 720px;
+        }
+
+        &_full {
+            max-width:100%;
         }
 
         &--first {
@@ -228,7 +232,7 @@
         }
 
         &-content {
-            max-width: 660px;
+            max-width: 720px;
             flex: none;
             width: 100%;
 

@@ -58,6 +58,10 @@ a {
 .subtitle {
     color: var(--color-main);
     font-weight: 500;
+
+    &--small {
+        max-width:720px;
+    }
 }
 
 .team-label {

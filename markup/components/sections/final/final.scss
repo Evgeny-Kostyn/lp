@@ -3,7 +3,11 @@
  */
 .final-section {
     &__fiches {
-        padding: 40px 0 80px;
+        padding:0 0 3.5rem;
+
+        @include tablet {
+            padding: 40px 0 80px;
+        }
 
         &-list {
             display:grid;
@@ -16,7 +20,7 @@
             }
 
             @include desktop {
-                gap:5rem;
+                gap:4rem;
             }
         }
 
@@ -98,7 +102,6 @@
     &__end {
         padding:3.5rem 0 2.5rem;
         position:relative;
-        border-top: 1px solid #d8d8d8;
 
         .title {
             span:not(.semibold):not(.gradient-green) {
@@ -113,6 +116,17 @@
 
     .intro-section__content {
         margin:2.5rem 0;
+
+        &_quote {
+            @include tablet {
+                margin:-2.5rem 0 5rem;
+
+                .subtitle {
+                    width:100%;
+                    max-width:720px;
+                }
+            }
+        }
     }
 
     &__logo {
