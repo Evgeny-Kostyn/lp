@@ -64,6 +64,10 @@
                 @include mobile {
                     font-size:.875rem;
                 }
+
+                @include book {
+                    max-width: 270px;
+                }
             }
         }
     }
@@ -97,6 +101,10 @@
         @include laptop {
             margin: 0 0 80px;
         }
+
+        @include book {
+            max-width: 840px;
+        }
     }
 
     &__end {
@@ -125,6 +133,18 @@
                     width:100%;
                     max-width:720px;
                 }
+            }
+
+            @include book {
+                .subtitle {
+                    max-width:660px;
+                }
+            }
+        }
+
+        @include book {
+            .subtitle.body-l {
+                font-size:1.375rem;
             }
         }
     }

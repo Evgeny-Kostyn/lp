@@ -11,6 +11,10 @@
     &__head {
         max-width: 790px;
 
+        @include book {
+            max-width: 740px;
+        }
+
         .subtitle {
             margin: 0;
         }

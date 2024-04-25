@@ -57,6 +57,10 @@
 
         &-text {
             max-width: 540px;
+
+            @include book {
+                max-width: 518px;
+            }
         }
 
         &-figma {

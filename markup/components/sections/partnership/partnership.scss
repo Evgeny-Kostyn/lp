@@ -21,6 +21,34 @@
 
             .subtitle {
                 max-width: 720px;
+
+                @include book {
+                    max-width:660px;
+                }
+            }
+        }
+
+        &--small2 {
+            padding: 0;
+
+            .subtitle {
+                max-width: 720px;
+
+                @include book {
+                    max-width:640px;
+                }
+            }
+        }
+
+        &--small3 {
+            padding: 0;
+
+            .subtitle {
+                max-width: 720px;
+
+                @include book {
+                    max-width:650px;
+                }
             }
         }
 
@@ -54,6 +82,10 @@
             @include laptop {
                 max-width: 1120px;
                 margin: 0 0 80px;
+            }
+
+            @include book {
+                max-width: 900px;
             }
         }
     }
@@ -377,6 +409,10 @@
             max-width: 662px;
             padding-left: 23px;
             margin-top: 12px;
+
+            @include book {
+                max-width: 625px;
+            }
         }
 
         &-websites {

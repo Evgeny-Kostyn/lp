@@ -21,6 +21,10 @@
 
         .subtitle {
           max-width: 840px;
+
+            @include book {
+                max-width: 780px;
+            }
         }
     }
 

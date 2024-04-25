@@ -18,13 +18,41 @@
 
     .title {
         max-width:1120px;
+
+        @include book {
+            max-width:940px;
+        }
+    }
+
+    .title2 {
+        max-width:1120px;
+
+        @include book {
+            max-width:900px;
+        }
     }
 
     &__content {
         max-width: 840px;
 
+        @include book {
+            max-width: 740px;
+        }
+
         &--small {
             max-width: 720px;
+
+            @include book {
+                max-width: 680px;
+            }
+        }
+
+        &--small2 {
+            max-width: 720px;
+
+            @include book {
+                max-width: 650px;
+            }
         }
 
         &_full {
@@ -168,6 +196,10 @@
 
             @include laptop {
                 font-size: 1.375rem;
+            }
+
+            @include book {
+                font-size: 1.25rem;
             }
         }
     }

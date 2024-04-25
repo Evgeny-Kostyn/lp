@@ -78,4 +78,27 @@
     aboutSections.forEach(function(about) {
         observer.observe(about);
     });
+
+
+
+    // Letter Slider
+    const jurySwiper = new Swiper('.js--letters-slider', {
+        loop: true,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.copy-section__slider-arrow_next',
+            prevEl: '.copy-section__slider-arrow_prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            760: {
+                autoHeight: true,
+            }
+        }
+
+    });
+
 })();

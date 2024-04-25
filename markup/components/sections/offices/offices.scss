@@ -16,6 +16,10 @@
 
     &__head {
         max-width: 790px;
+
+        @include book {
+            max-width: 660px;
+        }
     }
 
     &__toggle {
