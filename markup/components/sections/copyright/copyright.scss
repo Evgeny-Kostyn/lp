@@ -18,7 +18,11 @@
         }
 
         &_ai {
-            margin-bottom:5rem;
+            margin-bottom:2.5rem;
+
+            @include laptop {
+                margin-bottom:5rem;
+            }
         }
 
         &_wide {
@@ -103,27 +107,33 @@
         }
     }
 
-    &__grid {
+    &__card {
+        border-radius:6px;
+        border:1px solid #D4D4D4;
+        margin:0 0 1.5rem;
+        flex-direction:column-reverse;
+        display:flex;
+        justify-content:space-between;
+
         @include tablet {
-            display:flex;
-            justify-content:space-between;
             border-radius:12px;
-            border:1px solid #D4D4D4;
+            flex-direction:row;
         }
     }
 
-    &__sidebar {
-        img {
-            display:block;
-            margin:0 0 1rem;
+    &__btn {
+        &_mobile {
+            display:none;
         }
 
-        @include tablet {
-            width:50%;
-            max-width:640px;
+        @include mobile {
+            margin-top:1rem;
 
-            img {
+            &_desktop {
                 display:none;
+            }
+            &_mobile {
+                display:block;
             }
         }
     }
@@ -133,18 +143,40 @@
         justify-content:center;
         align-items:flex-start;
         flex-direction:column;
-        margin:0 0 2rem;
+        padding:1.5rem 1.25rem;
 
         @include tablet {
+            flex-direction:column;
             background:none;
             border-radius:0;
-            min-height:500px;
             padding:2.5rem;
-            margin:0;
         }
 
         @include laptop {
+            padding:3rem;
+        }
+
+        @include desktop {
             padding:5rem;
+        }
+    }
+
+    &__image {
+        height:100%;
+        background:#E9EEF9;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        justify-content:center;
+        width:100%;
+
+        @include tablet {
+            min-height:340px;
+            width:50%;
+        }
+
+        @include laptop {
+            min-height:540px;
         }
 
         @include desktop {
@@ -166,46 +198,13 @@
         }
     }
 
-    &__image {
-        height:100%;
-        position:absolute;
-        top:0;
-        right:0;
-        width:100%;
-        opacity:0;
-        transition:var(--transition);
-        background:#E9EEF9;
-        min-height:640px;
-
-        &_active {
-            z-index:2;
-            opacity:1;
-        }
-
-        &-fixed {
-            display:flex;
-            align-items:center;
-            flex-direction:column;
-            justify-content:center;
-            background:#E9EEF9;
-            padding:.5rem 0 2rem;
-            margin:0 0 1rem;
-
-            @include tablet {
-                background:none;
-                position:sticky;
-                padding:0;
-                top:6%;
-                margin:0;
-                left:0;
-                min-height:640px;
-            }
-        }
-    }
-
     &__person {
         display:flex;
         justify-content:center;
-        margin:0 0 5rem;
+        margin:0 0 2.5rem;
+
+        @include laptop {
+            margin-bottom:5rem;
+        }
     }
 }
