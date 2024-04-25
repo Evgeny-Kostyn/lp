@@ -26,6 +26,12 @@
         &--small {
             max-width: 660px;
         }
+
+        &--first {
+          > .title {
+            margin: 0 0 16px;
+          }
+        }
     }
 
     &__people {
