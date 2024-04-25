@@ -17,6 +17,10 @@
             max-width:660px;
         }
 
+        &_ai {
+            margin-bottom:5rem;
+        }
+
         &_wide {
             max-width:760px;
         }
@@ -32,7 +36,7 @@
     }
 
     &__text {
-        margin:0 0 5rem;
+        margin:0 0 2.5rem;
         max-width:1055px;
 
         .title {
@@ -139,15 +143,32 @@
         width:100%;
         opacity:0;
         transition:var(--transition);
+        background:#E9EEF9;
+        min-height:640px;
 
         &_active {
+            z-index:2;
             opacity:1;
         }
 
-        img {
-            position:sticky;
-            top:6%;
-            left:0;
+        &-fixed {
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+            justify-content:center;
+            background:#E9EEF9;
+            padding:.5rem 0 2rem;
+            margin:0 0 1rem;
+
+            @include tablet {
+                background:none;
+                position:sticky;
+                padding:0;
+                top:6%;
+                margin:0;
+                left:0;
+                min-height:640px;
+            }
         }
     }
 

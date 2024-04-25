@@ -53,9 +53,13 @@
         &-item {
             display: flex;
             flex-direction: column;
-            padding: 25.8px 40px;
+            padding: 1.5rem ;
             border-radius: 8px;
             border: 1px solid #d4d4d4;
+
+            @include laptop {
+                padding: 25.8px 40px;
+            }
         }
 
         &-number {
@@ -69,10 +73,6 @@
             @include laptop {
                 margin: 0 0 64px;
             }
-        }
-
-        &-logo {
-            margin: 0 0 16px;
         }
     }
 

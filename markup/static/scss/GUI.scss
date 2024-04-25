@@ -51,23 +51,7 @@ a {
     font-weight: 500;
 
     .gradient-green {
-        position: relative;
         background: linear-gradient(90deg, #ffffff 0%, #e0fcb3 33%);
-
-        @include tablet {
-            background:none;
-
-            &:after {
-                content: '';
-                background: linear-gradient(90deg, #ffffff 0%, #e0fcb3 33%);
-                top: 6px;
-                height: calc(100% - 8px);
-                left: 0;
-                width: 100%;
-                position: absolute;
-                z-index: -1;
-            }
-        }
     }
 }
 
@@ -141,11 +125,11 @@ a {
     }
 }
 
-h1 {
+h1, .h1 {
   @include font-size-h1;
 }
 
-h2 {
+h2, .h2 {
     @include font-size-h2;
 }
 
@@ -153,7 +137,7 @@ h3, .h3 {
     @include font-size-h3;
 }
 
-h4 {
+h4, .h4 {
     @include font-size-h4;
 }
 
